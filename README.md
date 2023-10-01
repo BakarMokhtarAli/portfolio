@@ -21,7 +21,7 @@ Contact:
 
 Bakar Mokhtar Ali
 walaalpakar08@gmail.com
-
+https://portfolio-bakarmokhtarali.vercel.app/
 Call to Action:
 
 Contact Bakar today to discuss your web development needs.
