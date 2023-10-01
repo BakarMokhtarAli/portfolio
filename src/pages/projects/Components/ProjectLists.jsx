@@ -7,6 +7,9 @@ export const ProjectLists = () => {
     <div className="w-full m-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
      {
       projects.map(project =>(
+        <>
+        
+        {/* {console.log(project)} */}
         <div key={project.id} className="w-3/4 md:w-80 m-auto bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-500 shadow-sm rounded h-fit">
         <div className="flex flex-col justify-center items-center">
           <img className="w-full rounded-t h-40 aspect-square" src={project.image} alt={project.title} />
@@ -16,8 +19,8 @@ export const ProjectLists = () => {
           <p className="dark:text-white text-slate-900 text-xs">{project.description}</p>
           <span className='flex flex-row justify-center items-center gap-2 mt-1'>
            {
-            project.language.map((lang) =>(
-              <span className='bg-slate-900 dark:bg-white text-white text-xs px-1 rounded-sm dark:text-slate-900'>{lang}</span>
+            project.language.map((lang,index) =>(
+              <span key={index} className='bg-slate-900 dark:bg-white text-white text-xs px-1 rounded-sm dark:text-slate-900'>{lang}</span>
             ))
            }
             {/* <span className="bg-[#FF4004] px-1 rounded-sm text-white text-[8px]">Html</span>
@@ -30,9 +33,12 @@ export const ProjectLists = () => {
           </span>
         </div>
     </div>
+      
+    </>
       ))
      }
      
-    </div>
+  </div>
+    
   )
 }

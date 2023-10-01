@@ -22,7 +22,7 @@ export const Hero = () => {
 
         {/* right */}
         <div className="p-5 md:p-0 md:text-left text-center ">
-          <h1 className="font-thin text-3xl dark:text-yellow-400">About me</h1>
+          <h1 className="font-light text-3xl dark:text-yellow-400">About me</h1>
           <p className="text-lg pt-4">
             i am student bootcarmp, freelancer, i have 3+ years of work
             experiance i am your next web developer

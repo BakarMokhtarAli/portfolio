@@ -1,13 +1,15 @@
 import { BsTelephoneOutboundFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-export const Contact = () => {
+export const Contact = ({title}) => {
+  document.title = title;
   const form = useRef();
-
+  const [sent, setSent] = useState(false);
+  
 
   const initialValues = {
     name: "",
@@ -18,7 +20,7 @@ export const Contact = () => {
   const validationSchema = Yup.object({
     name: Yup.string().required("name is required!"),
     email: Yup.string().email("Email is invalid").required("email is required!"),
-    message: Yup.string().required("email is required!")
+    message: Yup.string().required("message is required!")
   })
 
  
@@ -28,6 +30,10 @@ export const Contact = () => {
     emailjs.sendForm('service_ggismw7', 'template_k687oj7', form.current, 'JqxwnroRewv8Ylwal')
       .then((result) => {
           console.log(result.text);
+          setSent(true)
+          setTimeout(()=>{
+            window.location.reload();
+          }, 2000)
       }, (error) => {
           console.log(error.text);
       });
@@ -52,6 +58,13 @@ export const Contact = () => {
           > 
 
           <Form ref={form} className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3 p-2">
+          {
+          sent && (
+            <div className="dark:bg-slate-800 dark:border-slate-600 dark:text-white text-base ml-2 border py-2 px-4  rounded shadow text-center transition-all">
+              <p><i className="bi bi-check-circle-fill text-green-400 mx-1"></i>message sent successfully, I will contact you ASAP!</p>
+            </div>
+          )
+        }
             <Field ype="text"  placeholder="name" name="name" autoComplete="off" className="w-full m-2 outline-none text-xl font-normal border py-2 px-4 rounded dark:bg-slate-800 dark:border-gray-200 dark:text-white" />
              <ErrorMessage name="name" component={"div"} className="text-base p-2 -mt-6 ml-1 text-red-500" /> 
              <Field type="email" placeholder="email" name="email" autoComplete="off" className="w-full m-2 outline-none text-xl font-normal border py-2 px-4 rounded dark:bg-slate-800 dark:border-gray-200 dark:text-white"/>
