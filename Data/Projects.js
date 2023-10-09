@@ -3,6 +3,11 @@ import { FaCss3 } from "react-icons/fa";
 import { BiLogoJavascript } from "react-icons/bi";
 import dictionary from "../src/assets/images/dictionary.png"
 import rent from "./rent.png"
+import nasrudiin from "./nasrudiin.png"
+import movies from "./movies.png"
+import game from "./game.png"
+import age from "./age.png"
+import note from "./note.png"
 import { nanoid } from "nanoid";
 function getId() {
     return nanoid().slice(0,5)
@@ -24,7 +29,7 @@ const projects = [
         title: "Nasrudiin",
         description: "Nasrudin School is a private, independent, co-educational Islamic school located in Mogadishu, Somalia. It was founded in 2021 with the mission of providing high-quality education to students of all backgrounds, regardless of their financial situation. ",
         language: ["Html","css","js"],
-        image: "../src/assets/images/nasrudiin.png",
+        image: `${nasrudiin}`,
         github_link: "https://github.com/BakarMokhtarAli/nasrudiin",
         live_link: "https://clever-moonbeam-9f7e59.netlify.app/"
     },
@@ -32,7 +37,7 @@ const projects = [
         id: getId(),
         title: "Movies",
         description: "Movie App is the perfect app for movie lovers of all ages. It's easy to use and navigate, and it's packed with features that will help you find the perfect movie to watch next",
-        image: "../src/assets/images/movies.png",
+        image: `${movies}`,
         language: ["React","Tailwind"],
         github_link: "https://github.com/BakarMokhtarAli/Movie-App",
         live_link: "https://movie-759a0f.netlify.app/"
@@ -50,7 +55,7 @@ const projects = [
         id: getId(),
         title: "Rock Paper Scissor Game",
         description: "Rock, Paper, Scissors is a simple but fun game that can be enjoyed by people of all ages",
-        image: "../src/assets/images/game.png",
+        image: `${game}`,
         language: ["Html","Css", "Js"],
         github_link: "https://github.com/BakarMokhtarAli/Rock-paper-scissor",
         live_link: "https://rock-paper-scissors1-game87.netlify.app/"
@@ -59,7 +64,7 @@ const projects = [
         id: getId(),
         title: "Note Taking App",
         description: "Note Taking App is perfect for students, professionals, and anyone else who needs to take notes on the go. It's easy to use and navigate, and it has all the features you need to take organized and effective notes.",
-        image: "../src/assets/images/note.png",
+        image: `${note}`,
         language: ["Html","Css", "Js"],
         github_link: "https://github.com/BakarMokhtarAli/note-aking",
         live_link: "https://note-taking-appc30ece.netlify.app/"
@@ -68,7 +73,7 @@ const projects = [
         id: getId(),
         title: "Age Calculator",
         description: "Age Calculator App is perfect for anyone who needs to calculate their age quickly and easily. It's also a great way to keep track of your age over time.",
-        image: "../src/assets/images/age.png",
+        image: `${age}`,
         language: ["Html","Css", "Js"],
         github_link: "https://github.com/BakarMokhtarAli/Age-Calculator",
         live_link: "https://benevolent-blini-0c5ec3.netlify.app/"
