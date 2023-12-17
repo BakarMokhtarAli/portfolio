@@ -7,7 +7,9 @@ import nasrudiin from "./nasrudiin.png"
 import movies from "./movies.png"
 import game from "./game.png"
 import age from "./age.png"
-import note from "./note.png"
+import note from "./note.png";
+import dice from "./dice-game.png";
+import guess from "./guess.png"
 import { nanoid } from "nanoid";
 function getId() {
     return nanoid().slice(0,5)
@@ -71,12 +73,30 @@ const projects = [
     },
     {
         id: getId(),
+        title: "Dice Roll Game",
+        description: "Immerse yourself in the thrill of chance as you compete against a friend to achieve the highest score and emerge victorious. This game brings together strategy, luck, and a touch of suspense, making it an ideal choice for friendly competitions and casual gaming sessions.",
+        image: `${dice}`,
+        language: ["Html","Css", "Js"],
+        github_link:"https://github.com/BakarMokhtarAli/Rolling-Dice-Game",
+        live_link: "https://ludo-star.netlify.app/"
+    },
+    {
+        id: getId(),
         title: "Age Calculator",
         description: "Age Calculator App is perfect for anyone who needs to calculate their age quickly and easily. It's also a great way to keep track of your age over time.",
         image: `${age}`,
         language: ["Html","Css", "Js"],
         github_link: "https://github.com/BakarMokhtarAli/Age-Calculator",
         live_link: "https://benevolent-blini-0c5ec3.netlify.app/"
+    },
+    {
+        id: getId(),
+        title: "Guess My Number",
+        description: 'Embark on a delightful journey of number guessing with our engaging "Guess My Number" game. This classic and interactive game challenges players to think of a number between 1 to 20.',
+        image: `${guess}`,
+        language: ["Html","Css", "Js"],
+        github_link: "https://github.com/BakarMokhtarAli/Guess-My-Number",
+        live_link: "https://gues5-my-number.netlify.app/"
     }
 ]
 export default projects;
